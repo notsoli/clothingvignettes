@@ -1,0 +1,76 @@
+@font-face {
+    font-family: 'Isenheim';
+    src: url('./fonts/Isenheim-Regulier.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+#bg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.prompt {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.66s steps(3);
+}
+
+.prompt h1 {
+    margin-bottom: 100px;
+    font-size: 50px;
+    font-family: "Isenheim";
+    color: #292929;
+}
+
+.options {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.options img {
+    width: 200px;
+    margin: 0 50px;
+}
+
+#prompt_1 {
+    transform: translate(-100vw, 0);
+}
+
+#prompt_2 {
+    transform: translate(100vw, 0);
+}
+
+#prompt_1.active, #prompt_2.active {
+    transform: translate(0, 0);
+}
+
+#animation_player {
+    width: calc(100% - 200px);
+    height: calc(100% - 200px);
+    position: absolute;
+    top: 100px;
+    left: 100px;
+    transform: translate(0, 100vh);
+    transition: transform 0.66s steps(3);
+    background-color: black;
+}
+
+#animation_player.active {
+    transform: translate(0, 0);
+}
