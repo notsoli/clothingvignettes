@@ -58,6 +58,9 @@ function play_animation(input) {
         case 3:
             source.setAttribute("src", "videos/late-for-class.mp4")
             break
+        case 4:
+            source.setAttribute("src", "videos/question.mp4")
+            break
     }
 
     setTimeout(() => {
